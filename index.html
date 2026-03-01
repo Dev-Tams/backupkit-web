@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BackupKit — Dead-simple database backups that just work</title>
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Berkeley+Mono:ital,wght@0,100..700;1,100..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-icon">B</div>
+    <span class="nav-logo-text">BackupKit</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#commands">CLI</a></li>
+    <li><a href="#storage">Storage</a></li>
+    <li><a href="https://github.com/dev-tams/backupkit" target="_blank" rel="noopener noreferrer">Docs</a></li>
+    <li><a href="https://github.com/dev-tams/backupkit" target="_blank" rel="noopener noreferrer" class="nav-cta">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      GitHub
+    </a></li>
+  </ul>
+</nav>
+
+<main>
+<!-- HERO -->
+<div class="hero">
+  <div class="floating-icons">
+    <div class="float-icon">🐘</div>
+    <div class="float-icon">🗄️</div>
+    <div class="float-icon">☁️</div>
+    <div class="float-icon">🔐</div>
+    <div class="float-icon">🐬</div>
+    <div class="float-icon">📦</div>
+    <div class="float-icon">⚡</div>
+    <div class="float-icon">🔒</div>
+  </div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-badge">
+    <span class="badge-dot"></span>
+    Open source · Go-powered · Single binary
+  </div>
+
+  <h1>Database backups<br>that <em>just work</em></h1>
+
+  <p class="hero-sub">
+    BackupKit automates PostgreSQL, MySQL, and SQLite backups to S3, Backblaze B2, or local storage. One config file. No babysitting.
+  </p>
+
+  <div class="hero-actions">
+    <a href="https://github.com/dev-tams/backupkit" target="_blank" rel="noopener noreferrer" class="btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      View on GitHub
+    </a>
+    <a href="#commands" class="btn-secondary">See CLI commands</a>
+  </div>
+
+  <div class="hero-install">
+    <div class="install-box">
+      <span class="install-prompt">$</span>
+      <span class="install-cmd">go install github.com/dev-tams/backupkit@latest</span>
+      <button class="copy-btn" data-copy-text="go install github.com/dev-tams/backupkit@latest">&#x2398;</button>
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat">
+      <span class="stat-num">3</span>
+      <span class="stat-label">Databases</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">S3 · B2</span>
+      <span class="stat-label">Storage targets</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">AES-256</span>
+      <span class="stat-label">Encryption</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">1</span>
+      <span class="stat-label">Binary</span>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section id="features">
+  <p class="section-label">// features</p>
+  <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
+  <p class="section-sub">Built for developers who want their data protected without spending a weekend on custom scripts.</p>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">⏰</div>
+      <div class="feature-name">Cron Scheduling</div>
+      <div class="feature-desc">Run backups on any schedule. Uses standard cron syntax or human-friendly shortcuts like @daily and @hourly.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon green">🔐</div>
+      <div class="feature-name">AES-256 Encryption</div>
+      <div class="feature-desc">Encrypt backups at rest. Password stored in env vars, never in config files. Zero plaintext on disk or in transit.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🗜️</div>
+      <div class="feature-name">Gzip Compression</div>
+      <div class="feature-desc">Enabled by default. Drastically reduces storage costs, especially on large Postgres and MySQL dumps.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon green">♻️</div>
+      <div class="feature-name">Retention Policies</div>
+      <div class="feature-desc">Automatically prune old backups. Configure daily, weekly, and monthly retention independently per database.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">✅</div>
+      <div class="feature-name">Backup Verification</div>
+      <div class="feature-desc">Checksum verification after every upload. Know immediately if a backup is corrupt or incomplete.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon green">🔔</div>
+      <div class="feature-name">Notifications</div>
+      <div class="feature-desc">SMTP email and webhook alerts on success or failure. Never find out about a failed backup during an incident.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- CLI SECTION -->
+<div class="cli-section" id="commands">
+  <div class="cli-inner">
+    <div>
+      <p class="section-label">// cli</p>
+      <h2 class="section-title" style="font-size: clamp(28px, 3vw, 42px);">Seven commands.<br>Full control.</h2>
+      <p class="section-sub" style="margin-bottom: 32px;">
+        A complete backup workflow in a single binary. From initializing a config to restoring from disaster.
+      </p>
+
+      <div class="db-chips">
+        <div class="db-chip"><span class="db-chip-dot" style="background:#336791"></span>PostgreSQL</div>
+        <div class="db-chip"><span class="db-chip-dot" style="background:#00758f"></span>MySQL / MariaDB</div>
+        <div class="db-chip"><span class="db-chip-dot" style="background:#5aa9d6"></span>SQLite</div>
+      </div>
+    </div>
+
+    <div class="cli-terminal">
+      <div class="terminal-bar">
+        <span class="terminal-dot dot-red"></span>
+        <span class="terminal-dot dot-yellow"></span>
+        <span class="terminal-dot dot-green"></span>
+        <span class="terminal-title">backupkit</span>
+      </div>
+      <div class="terminal-body">
+        <span class="t-comment t-line"># Generate sample config</span>
+        <span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">backupkit init</span></span>
+        <span class="t-success t-line">✓ Created backup.yaml</span>
+        <span class="t-blank"></span>
+
+        <span class="t-comment t-line"># Test connections before going live</span>
+        <span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">backupkit test</span></span>
+        <span class="t-success t-line">✓ production-db  →  postgres OK</span>
+        <span class="t-success t-line">✓ s3-production  →  S3 bucket OK</span>
+        <span class="t-blank"></span>
+
+        <span class="t-comment t-line"># Run a backup now</span>
+        <span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">backupkit backup</span></span>
+        <span class="t-out t-line">  Dumping production-db...</span>
+        <span class="t-out t-line">  Compressing (gzip)...</span>
+        <span class="t-out t-line">  Encrypting (AES-256)...</span>
+        <span class="t-out t-line">  Uploading to s3-production...</span>
+        <span class="t-success t-line">✓ Backup complete — 142MB in 8.3s</span>
+        <span class="t-blank"></span>
+
+        <span class="t-comment t-line"># Start the scheduler daemon</span>
+        <span class="t-line"><span class="t-prompt">$</span> <span class="t-cmd typing">backupkit daemon</span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STORAGE -->
+<section id="storage">
+  <p class="section-label">// storage</p>
+  <h2 class="section-title">Your data, your storage.</h2>
+  <p class="section-sub">Push backups to the destinations you already use. No vendor lock-in.</p>
+
+  <div style="max-width: 600px;">
+    <div class="storage-grid">
+      <div class="storage-card">
+        <span class="storage-icon">☁️</span>
+        <div>
+          <div style="font-weight: 600; color: var(--text-bright); margin-bottom: 2px;">AWS S3</div>
+          <div style="font-size: 11px; color: var(--text-dim);">Any region, custom prefix</div>
+        </div>
+      </div>
+      <div class="storage-card">
+        <span class="storage-icon">🔥</span>
+        <div>
+          <div style="font-weight: 600; color: var(--text-bright); margin-bottom: 2px;">Backblaze B2</div>
+          <div style="font-size: 11px; color: var(--text-dim);">S3-compatible, cheap egress</div>
+        </div>
+      </div>
+      <div class="storage-card">
+        <span class="storage-icon">💾</span>
+        <div>
+          <div style="font-weight: 600; color: var(--text-bright); margin-bottom: 2px;">Local Filesystem</div>
+          <div style="font-size: 11px; color: var(--text-dim);">NFS, mounted drives, dev</div>
+        </div>
+      </div>
+      <div class="storage-card" style="border-style: dashed; opacity: 0.5;">
+        <span class="storage-icon">🌐</span>
+        <div>
+          <div style="font-weight: 600; color: var(--text-bright); margin-bottom: 2px;">Google Cloud Storage</div>
+          <div style="font-size: 11px; color: var(--text-dim);">Coming post-MVP</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- GITHUB CTA -->
+<div class="github-section">
+  <div class="github-card">
+    <h2>Built in the open.<br>Contributions welcome.</h2>
+    <p>BackupKit is MIT licensed. If you've ever wished your backup setup was simpler, this is the place to make it happen.</p>
+
+    <div class="github-actions">
+      <a href="https://github.com/dev-tams/backupkit" target="_blank" rel="noopener noreferrer" class="btn-github">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        Star on GitHub
+      </a>
+      <a href="https://github.com/dev-tams/backupkit/issues" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="color: var(--text);">Open an issue</a>
+    </div>
+
+    <div class="contrib-strip">
+      <div class="contrib-avatars">
+        <div class="contrib-avatar">01</div>
+        <div class="contrib-avatar">02</div>
+        <div class="contrib-avatar">03</div>
+        <div class="contrib-avatar">+</div>
+      </div>
+      <span>Be one of the first contributors</span>
+    </div>
+  </div>
+</div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-brand">BackupKit — APACHE 3.0 License</span>
+  <ul class="footer-links">
+    <li><a href="https://github.com/dev-tams/backupkit" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    <li><a href="https://github.com/dev-tams/backupkit#readme" target="_blank" rel="noopener noreferrer">Docs</a></li>
+    <li><a href="https://github.com/dev-tams/backupkit/releases" target="_blank" rel="noopener noreferrer">Releases</a></li>
+  </ul>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
