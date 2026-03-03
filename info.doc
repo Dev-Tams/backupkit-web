@@ -1,0 +1,20 @@
+backupkit-web/
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx          ← root layout with sidebar
+│   │   ├── globals.css
+│   │   ├── page.tsx            ← redirects to /dashboard
+│   │   ├── dashboard/page.tsx  ← Overview
+│   │   ├── history/page.tsx    ← Backup History
+│   │   ├── databases/page.tsx  ← Databases
+│   │   ├── storage/page.tsx    ← Storage
+│   │   ├── notifications/page.tsx
+│   │   └── settings/page.tsx
+│   ├── components/
+│   │   ├── layout/Sidebar.tsx
+│   │   ├── layout/Topbar.tsx
+│   │   ├── ui/Badge.tsx
+│   │   ├── ui/StatCard.tsx
+│   │   └── ui/Card.tsx
+│   └── lib/
+│       └── mock-data.ts        ← all mock data, shaped after your config format
