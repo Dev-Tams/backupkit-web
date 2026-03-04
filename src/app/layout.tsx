@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./global.css";
-import { DashboardShell } from "@/components/layout/dashboard-shell";
 
 export const metadata: Metadata = {
   title: "BackupKit Cloud",
@@ -14,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <DashboardShell>{children}</DashboardShell>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
