@@ -32,7 +32,7 @@ export default function LoginPage() {
               <label className="form-label" htmlFor="login-email">
                 Email
               </label>
-              <input className="form-input" type="email" id="login-email" placeholder="dev@tams.dev" />
+              <input className="form-input" type="email" id="login-email" placeholder="example@mail.com" />
             </div>
 
             <div className="form-group">

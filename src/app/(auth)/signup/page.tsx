@@ -33,13 +33,13 @@ export default function SignupPage() {
                 <label className="form-label" htmlFor="first-name">
                   First name
                 </label>
-                <input className="form-input" id="first-name" placeholder="Dev" />
+                <input className="form-input" id="first-name" placeholder="John" />
               </div>
               <div className="form-group">
                 <label className="form-label" htmlFor="last-name">
                   Last name
                 </label>
-                <input className="form-input" id="last-name" placeholder="Tams" />
+                <input className="form-input" id="last-name" placeholder="Doe" />
               </div>
             </div>
 
@@ -47,7 +47,7 @@ export default function SignupPage() {
               <label className="form-label" htmlFor="email">
                 Email
               </label>
-              <input className="form-input" type="email" id="email" placeholder="dev@tams.dev" />
+              <input className="form-input" type="email" id="email" placeholder="example@mail.com" />
             </div>
 
             <div className="form-group">
@@ -55,7 +55,6 @@ export default function SignupPage() {
                 Password
               </label>
               <input className="form-input" type="password" id="password" placeholder="Min. 8 characters" />
-              <div className="form-hint">Use at least 8 characters, including upper/lowercase and a number.</div>
             </div>
 
             <div className="form-hint terms-hint">
